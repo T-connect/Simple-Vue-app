@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex mb-4">
+              <span class="mr-3"><img src="images/bg-img2.jpg" alt="" class="dp"></span>
+              <span>
+            <h4 class="card-title mb-0">Ty</h4>
+            <p class="mt-0 username">@Ty_Dev1</p>
+            </span>
+            </div>
+            <p class="card-text small">To become a front-end developer, the things you need to learn include HTML, CSS, and JAVASCRIPT. Then learn a javascript framework
+              which we have the likes of Vue, React, Angular.
+            </p>
+            <p class="small">For more of this, kindly like, retweet and comment.</p>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="d-flex align-items-center justify-content-between px-5">
+           <div class="action  text-white mr-3" @click="like = !like; liked = !liked"><span :class="{liked: liked}"><i class="fas fa-heart"></i></span> <span class="liked" v-if="like">1</span> </div>
+           <div class="action  text-white mr-3" @click="retweet = !retweet; retweeted = !retweeted"><span :class="{retweeted: retweeted}"><i class="fas fa-retweet"></i></span> <span class="retweeted" v-if="retweet">1</span> </div>
+           <div class="action text-white" @click="addComment"><span :class="{commented: commented}"> <i class="fas fa-comment-dots"></i></span> <span class="commented"> {{counter}} </span></div>
+         </div>
+
+          <div class="form-group mt-2" v-if="comment">
+             <input type="text" class="form-control comment-input" placeholder="Your comment..." v-model="inp">
+             <div class="d-flex justify-content-end">
+             <span class="text-success pr-2 comment-action" @click="done" v-if="inp !== '' ">Done</span>
+             <span class="text-danger pr-2 comment-action" @click="cancel" v-else>Cancel</span>
+             </div>
+          </div> 
+          
+          <div class="comment-section">
+          <h5>Comments:</h5>
+          <div class="d-flex align-items-center justify-content-between mt-3 rounded todoItem"  v-for="inp in inps">
+            <span>
+             {{ inp }}
+            </span>
+            <span>
+              <span type="button" class=" text-success" @click="removeComment"><i class="fas fa-trash-alt"></i></span>
+              </span>
+            </div>
+            </div>
+
+          
+         
+      </div>
+    <!-- Optional JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>     
+    <script src="main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
