@@ -1,0 +1,93 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.card{
+    background-color: black;
+    color: rgb(179, 176, 176);
+}
+
+.card-title{
+    color: green;
+}
+
+.username{
+    font-size: 14px;
+    color: rgb(138, 136, 136);
+}
+
+.dp{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.container{
+    width: 400px;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border: 3px solid grey;
+    border-radius: 10px;
+}
+
+.liked{
+    color: rgb(201, 69, 69);
+}
+
+.commented{
+    color: hsl(51, 100%, 50%);
+}
+
+.retweeted{
+    color: hsl(120, 100%, 25%);
+}
+
+.action{
+    width: max-content;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.comment-input, .comment-input:focus{
+    background: transparent;
+    color: grey;
+    border: 1px solid green;
+    margin-bottom: 8px;
+}
+
+.comment-section{
+    border-top: 1px solid rgb(87, 84, 84);
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+
+.todoItem{
+   border-bottom: 1px solid rgb(98, 243, 98);
+   padding-left: 7px;
+   padding-bottom: 5px;
+   color: rgb(161, 159, 159);
+}
+
+.btn, .btn:hover{
+    background: transparent;
+    border: none;
+}
+
+.comment-action{
+    cursor: pointer;
+    width: max-content;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        width: 93vw;
+        margin-top: 10px;
+    }
+}
+
+
+
+
