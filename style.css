@@ -52,7 +52,7 @@ body{
 
 .comment-input, .comment-input:focus{
     background: transparent;
-    color: grey;
+    color: rgb(192, 189, 189);
     border: 1px solid green;
     margin-bottom: 8px;
 }
